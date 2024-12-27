@@ -1,0 +1,262 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+
+.header {
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 20px;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+  font-weight: 300;
+  color: gray;
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax( 290px,1fr));
+  grid-gap: 20px;
+}
+
+
+.hero__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.hero__title {
+  font-size: 48px;
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+}
+
+.hero__prof {
+  color: #4facfe;
+  white-space: nowrap;
+}
+
+.hero__subtitle {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.hero__links {
+  display: flex;
+}
+
+.hero__link {
+  margin-right: 10px;
+
+  font-size: 30px;
+  color: #000;
+}
+
+.hero__link:hover {
+  color: #4facfe;
+}
+
+
+.hero__box {
+  max-width: 500px;
+  justify-self: center;
+  overflow: hidden;
+  border: 10px solid #fff;
+
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+
+  animation: ava-animate 5s infinite alternate;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.hero__box-img {
+  animation: ava-bg 3s infinite alternate;
+}
+
+@media screen and (max-width: 978px) {
+  .hero {
+    padding-top: 30px;
+  }
+
+  .hero__container {
+    grid-row-gap: 20px;
+  }
+
+  .hero__title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .hero__subtitle {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .hero__description {
+    font-size: 14px;
+  }
+
+  .hero__about {
+    text-align: center;
+  }
+
+  .hero__links {
+    justify-content: center;
+  }
+
+  .hero__box {
+    max-width: 350px;
+    justify-self: center;
+  }
+
+}
+
+
+
+@keyframes ava-animate {
+  0% {
+    border-radius: 62% 38% 72% 28% / 67% 32% 68% 33%;
+  }
+
+  40% {
+    border-radius: 37% 63% 53% 47% / 67% 32% 68% 33%;
+  }
+
+  60% {
+    border-radius: 23% 77% 39% 61% / 78% 54% 46% 22%;
+  }
+
+  100% {
+    border-radius: 18% 82% 24% 76% / 43% 54% 46% 57%;
+  }
+}
+
+@keyframes ava-bg {
+  from {
+    backdrop-filter: hue-rotate(0);
+  }
+
+  to {
+    backdrop-filter: hue-rotate(90deg);
+  }
+}
+
+/* Навігаційна панель */
+nav {
+  display: flex; /* Розташування елементів у рядок */
+  justify-content: center; /* Центрування елементів навігації */
+  position: sticky; /* Фіксація панелі у верхній частині сторінки */
+  top: 0; /* Фіксація у верхній частині вікна */
+  z-index: 1000; /* Встановлення пріоритету для накладення */
+  padding: 0px 0; /* Відступи зверху і знизу */
+}
+
+nav a {
+  color: #000000; /* Темно-сірий колір тексту посилань */
+  padding: 10px 20px; /* Відступи всередині посилання */
+  text-decoration: none; /* Відсутність підкреслення тексту */
+  font-weight: bold; /* Жирний текст */
+  transition: all 0.3s ease; /* Плавний перехід при зміні стану */
+  font-size: 50%;
+}
+
+nav a:hover {
+  color: white; /* Білий колір тексту при наведенні */
+  background-color: #323232; /* Темний фон при наведенні */
+  border-radius: 5px; /* Скруглення кутів */
+  transform: scale(1.1); /* Легке збільшення при наведенні */
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень под панелью навигации */
+  padding: 45px; /* Отступы внутри контейнера */
+  max-width: 600px; /* Максимальная ширина контейнера */
+  border-radius: 10px; /* Скругление углов */
+  color: #ffffff;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  animation: ava-animate 5s infinite alternate;
+}
+
+footer {
+  flex-direction: column; /* Расположение элементов в колонку */
+  text-align: center;
+}
+
+/* Контейнер сторінки */
+.container2 {
+  padding: 20px; /* Відступи всередині контейнера */
+  margin: auto; /* Центрування контейнера */
+  border-radius: 10px; /* Скруглення кутів */
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Секції */
+.section {
+  margin-bottom: 20px; /* Відступ знизу секції */
+  background-color: white; /* Білий фон секції */
+  padding: 20px; /* Внутрішні відступи секції */
+  border-radius: 10px; /* Скруглення кутів */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь секції */
+  opacity: 0; /* Початкова прозорість для анімації */
+  transform: translateY(30px); /* Початкова позиція для анімації */
+  animation: fadeIn 0.8s ease forwards; /* Анімація появи секції */
+}
+
+/* Анімація появи секції */
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Початкова прозорість */
+      transform: translateY(30px); /* Початкова позиція */
+  }
+  to {
+      opacity: 1; /* Повна непрозорість */
+      transform: translateY(0); /* Кінцева позиція */
+  }
+}
+

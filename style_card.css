@@ -1,0 +1,73 @@
+.container_forcards {
+    max-width: 1200px; /* Устанавливаем максимальную ширину */
+    width: 100%;
+    margin: 0 auto; /* Центруем контейнер */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Адаптация под размер экрана */
+    gap: 20px; /* Отступы между карточками */
+    justify-items: center; /* Центруем карточки */
+}
+
+.card {
+    display: flex; /* Flexbox для выравнивания содержимого */
+    flex-direction: column; /* Элементы располагаются в колонку */
+    align-items: center; /* Центруем элементы горизонтально */
+    justify-content: space-between; /* Равномерное распределение */
+    width: 150px;
+    border-radius: 10px;
+    overflow: hidden; /* Обрезаем лишнее */
+    text-align: center;
+    padding: 10px; /* Внутренние отступы */
+    background-color: #f9f9f9; /* Легкий фон для карточек */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: all 0.3s ease; /* Плавный переход для ховера */
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #eef4ff; /* Легкое изменение фона */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+    transform: translateY(-4px); /* Легкое поднятие карточки */
+}
+
+.card-image {
+    width: 100%; /* Картинка занимает всю ширину контейнера */
+    height: 120px; /* Фиксированная высота */
+    object-fit: cover; /* Масштабируем без искажений */
+    border-radius: 10px; /* Скругленные углы */
+}
+
+.project-title {
+    margin-top: 10px; /* Отступ между картинкой и текстом */
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.buttoncard {
+    margin-top: 10px; /* Отступ между текстом и кнопкой */
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease; /* Плавный переход */
+    cursor: pointer;
+    width: calc(100% - 20px); /* Ширина кнопки адаптивна */
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.buttoncard:hover {
+    background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 100%); /* Изменение градиента */
+    color: #020202; /* Изменение цвета текста */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Добавление тени */
+    transform: translateY(-2px); /* Легкое поднятие кнопки */
+}
